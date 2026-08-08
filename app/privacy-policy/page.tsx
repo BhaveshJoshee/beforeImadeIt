@@ -1,164 +1,337 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Shield, Lock, FileText, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Shield, ArrowLeft, Mail, ExternalLink, Globe, Lock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy & Affiliate Disclosure",
+  title: "Privacy Policy | The Nocturne",
   description:
-    "Legal compliance, cookie tracking, digital product distribution, and affiliate disclosures for Before I Made It studio.",
+    "Official Privacy Policy for The Nocturne. Details on data collection, usage, cookies, and privacy rights.",
 };
 
 export default function PrivacyPolicyPage() {
-  const lastUpdated = "August 8, 2026";
+  const lastUpdated = "August 08, 2026";
 
   return (
-    <div className="min-h-screen py-32 px-4 sm:px-6 max-w-4xl mx-auto">
+    <div className="min-h-screen py-28 sm:py-36 px-4 sm:px-6 max-w-4xl mx-auto">
       {/* Top Back Link */}
       <div className="mb-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-emerald-400 transition"
+          className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-emerald-400 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>RETURN_TO_STUDIO_OVERVIEW</span>
+          <span>RETURN_TO_HOME</span>
         </Link>
       </div>
 
-      {/* Header */}
+      {/* Header Banner */}
       <div className="border-b border-white/[0.08] pb-8 mb-10">
         <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 mb-2">
           <Shield className="w-4 h-4" />
-          <span>LEGAL_COMPLIANCE_PROTOCOL</span>
+          <span>LEGAL_&_COMPLIANCE_PROTOCOL</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Privacy Policy & Affiliate Disclosures
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          Privacy Policy
         </h1>
         <p className="text-xs font-mono text-zinc-400 mt-2">
-          LAST_REVISED: {lastUpdated} // VERSION 2.4 (DIGITAL ASSETS & AFFILIATE COMPLIANT)
+          LAST UPDATED: {lastUpdated} // THE NOCTURNE
         </p>
       </div>
 
       {/* Main Content Body */}
-      <div className="prose prose-invert max-w-none text-zinc-300 text-sm leading-relaxed space-y-10">
-        {/* Section 1: Overview */}
-        <section>
-          <h2 className="text-xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
-            1. Overview & Purpose
-          </h2>
+      <div className="text-zinc-300 text-sm leading-relaxed space-y-10">
+        {/* Intro */}
+        <section className="bg-[#0D1117]/80 border border-white/[0.08] p-6 rounded-2xl">
           <p>
-            Welcome to <strong>Before I Made It</strong> (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;the Studio&rdquo;).
-            This platform operates as an anonymous engineering brand dedicated to creating digital tools,
-            open-source automation frameworks, curated technology recommendations, and automated SaaS platforms.
+            This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
+            information when You use the Service and tells You about Your privacy rights and how the law protects You.
           </p>
-          <p className="mt-2">
-            We hold a strict principle of data minimization: we do not collect personal names, facial biometrics,
-            or intrusive personal identifiers. This Privacy Policy informs you of how we handle information across
-            our web applications, public API endpoints, link hubs, and digital assets.
+          <p className="mt-3 text-zinc-400">
+            We use Your Personal Data to provide and improve the Service. We collect, use, and disclose Your information as
+            described in this Privacy Policy and, where required by applicable law, only where We have a valid legal basis to
+            do so, including Your consent (where consent is required).
           </p>
         </section>
 
-        {/* Section 2: Affiliate Marketing & Commercial Disclosures */}
-        <section id="affiliates" className="p-6 rounded-2xl bg-[#0D1117] border border-emerald-500/20">
-          <div className="flex items-center gap-2 text-emerald-400 font-mono font-semibold text-base mb-2">
-            <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-            <span>2. Affiliate Marketing & Advertising Disclosures</span>
-          </div>
-          <p className="text-xs text-zinc-300 leading-relaxed">
-            In compliance with the <strong>Federal Trade Commission (FTC) guidelines</strong> and third-party
-            affiliate network standards (including Amazon Services LLC Associates Program, Pinterest Partner guidelines,
-            and digital SaaS affiliate agreements):
-          </p>
-          <ul className="list-disc pl-5 mt-3 space-y-2 text-xs text-zinc-300">
-            <li>
-              Some links on <strong>Before I Made It</strong> (particularly within the Curated Gear and Link Hub sections)
-              are affiliate referral links. If you click through and finalize a purchase, we may receive a small commission
-              at <em>zero additional cost to you</em>.
-            </li>
-            <li>
-              We only feature hardware, development tools, and software services that are actively integrated into our
-              actual engineering stack or verified for technical excellence.
-            </li>
-            <li>
-              We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed
-              to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com and affiliated sites.
-            </li>
-          </ul>
-        </section>
-
-        {/* Section 3: Information We Collect */}
+        {/* Interpretation and Definitions */}
         <section>
-          <h2 className="text-xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
-            3. Information Collected & Processing
+          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/[0.06] pb-2 mb-4 font-mono">
+            Interpretation and Definitions
           </h2>
-          <p>When you browse our websites or interact with our link hubs, we may automatically process non-identifying telemetry:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 text-xs font-mono">
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
-              <span className="text-emerald-400 font-semibold">Technical Log Data</span>
-              <p className="text-zinc-400 mt-1">
-                IP addresses (anonymized at edge), browser user-agent, operating system, and referral headers collected for security and DDoS mitigation.
-              </p>
-            </div>
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
-              <span className="text-emerald-400 font-semibold">Click & Conversion Signals</span>
-              <p className="text-zinc-400 mt-1">
-                Aggregate click events on link items, outbound affiliate routing, and anonymized referral traffic sources (e.g., Pinterest, GitHub).
-              </p>
-            </div>
+          
+          <h3 className="text-base font-semibold text-emerald-400 font-mono mb-2">
+            Interpretation
+          </h3>
+          <p className="mb-4 text-zinc-400">
+            The words whose initial letters are capitalized have meanings defined under the following conditions. The following
+            definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+          </p>
+
+          <h3 className="text-base font-semibold text-emerald-400 font-mono mb-3">
+            Definitions
+          </h3>
+          <p className="text-xs text-zinc-400 mb-4">For the purposes of this Privacy Policy:</p>
+
+          <div className="grid grid-cols-1 gap-3 text-xs font-mono">
+            {[
+              { term: "Account", desc: "A unique account created for You to access Our Service or parts of Our Service." },
+              { term: "Affiliate", desc: "An entity that controls, is controlled by, or is under common control with a party, where 'control' means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority." },
+              { term: "Application", desc: "Refers to The Nocturne, the software program provided by the Company." },
+              { term: "Company", desc: "Refers to The Nocturne (referred to as either 'the Company', 'We', 'Us' or 'Our' in this Privacy Policy)." },
+              { term: "Cookies", desc: "Small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website, among its many uses." },
+              { term: "Country/State", desc: "Refers to: Maharashtra, India." },
+              { term: "Device", desc: "Any device that can access the Service, such as a computer, a cell phone or a digital tablet." },
+              { term: "Personal Data", desc: "Any information that relates to an identified or identifiable individual. We use 'Personal Data' and 'Personal Information' interchangeably unless a law uses a specific term." },
+              { term: "Service", desc: "Refers to the Application or the Website or both." },
+              { term: "Service Provider", desc: "Any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used." },
+              { term: "Usage Data", desc: "Data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit)." },
+              { term: "User", desc: "Any individual who accesses or uses the Service." },
+              { term: "Website", desc: "Refers to The Nocturne, accessible from https://in.pinterest.com/nocturnestudeo" },
+              { term: "You", desc: "The individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable." },
+            ].map((def, idx) => (
+              <div key={idx} className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+                <span className="text-white font-semibold text-sm">{def.term}: </span>
+                <span className="text-zinc-400 font-sans text-xs">{def.desc}</span>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Section 4: Cookies & Tracking Technologies */}
-        <section id="cookies">
-          <h2 className="text-xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
-            4. Cookie Usage & Local Storage
-          </h2>
-          <p>
-            Our web application uses essential cookies and local storage tokens strictly necessary to maintain
-            dark-mode preferences, clipboard interactions, and edge routing performance. We do not sell, rent,
-            or trade personal user tracking databases to third-party data brokers.
-          </p>
-        </section>
-
-        {/* Section 5: Third-Party APIs & Integration Approvals */}
-        <section id="apis">
-          <h2 className="text-xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
-            5. Third-Party Services & API Compliance
-          </h2>
-          <p>
-            Our infrastructure integrates with reputable cloud providers and developer APIs, including:
-          </p>
-          <ul className="list-disc pl-5 mt-2 space-y-1 text-xs text-zinc-300">
-            <li><strong>Vercel Edge Network:</strong> Hosting, edge caching, serverless routing.</li>
-            <li><strong>Cloudflare:</strong> DNS routing, SSL encryption, security firewall.</li>
-            <li><strong>GitHub API:</strong> Public repository metrics, release tags, star counts.</li>
-            <li><strong>Pinterest & Affiliate APIs:</strong> Visual asset syndication and referral link validation.</li>
-          </ul>
-        </section>
-
-        {/* Section 6: User Rights & Data Protection (GDPR / CCPA) */}
+        {/* Collecting and Using Your Personal Information */}
         <section>
-          <h2 className="text-xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
-            6. Rights Under GDPR & CCPA
+          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/[0.06] pb-2 mb-4 font-mono">
+            Collecting and Using Your Personal Information
           </h2>
-          <p>
-            Depending on your jurisdiction, you have the right to request access to any personal data held about you,
-            request deletion, or opt out of non-essential telemetry. Because we enforce zero-identity logging, we do
-            not maintain persistent profiles linking back to your personal identity.
+
+          <h3 className="text-base font-semibold text-emerald-400 font-mono mb-2">
+            Types of Data Collected
+          </h3>
+
+          <div className="space-y-4 mb-6">
+            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+              <h4 className="text-sm font-semibold text-white font-mono mb-1">Personal Data</h4>
+              <p className="text-xs text-zinc-400">
+                While using Our Service, We may ask You to provide Us with certain personally identifiable information that can
+                be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+              </p>
+              <ul className="list-disc pl-5 mt-2 text-xs text-emerald-400 font-mono">
+                <li>Email address</li>
+              </ul>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+              <h4 className="text-sm font-semibold text-white font-mono mb-1">Usage Data</h4>
+              <p className="text-xs text-zinc-400 mb-2">
+                Usage Data is collected automatically when using the Service.
+              </p>
+              <p className="text-xs text-zinc-400 mb-2">
+                Usage Data may include information such as Your Device&apos;s Internet Protocol address (e.g. IP address), browser
+                type, browser version, the pages of Our Service that You visit, the time and date of Your visit, the time spent on
+                those pages, unique device identifiers and other diagnostic data.
+              </p>
+              <p className="text-xs text-zinc-400">
+                When You access the Service by or through a mobile device, We may collect certain information automatically,
+                including, but not limited to, the type of mobile device You use, Your mobile device&apos;s unique ID, the IP address
+                of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device
+                identifiers and other diagnostic data.
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-base font-semibold text-emerald-400 font-mono mb-2">
+            Tracking Technologies and Cookies
+          </h3>
+          <p className="text-xs text-zinc-400 mb-4">
+            We use tracking technologies (such as cookies) to track the activity and to improve Our Service. The technologies We use may include:
+          </p>
+
+          <ul className="list-disc pl-5 text-xs text-zinc-300 space-y-2 mb-4">
+            <li>
+              <strong>Cookies or Browser Cookies:</strong> A cookie is a small file placed on Your Device. You can instruct Your browser
+              to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be
+              able to use some parts of Our Service.
+            </li>
+            <li>
+              <strong>Web Beacons:</strong> Certain sections of Our Service may contain small electronic files known as web beacons
+              (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users
+              who have visited those pages and for other related website statistics.
+            </li>
+          </ul>
+
+          <div className="grid grid-cols-1 gap-3 text-xs mt-4">
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+              <span className="text-emerald-400 font-mono font-semibold">Necessary / Essential Cookies</span> (Session Cookies)
+              <p className="text-zinc-400 mt-1">
+                Administered by Us. Purpose: Essential to provide You with services available through the Website and to enable You
+                to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts.
+              </p>
+            </div>
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+              <span className="text-emerald-400 font-mono font-semibold">Cookies Policy / Notice Acceptance Cookies</span> (Persistent Cookies)
+              <p className="text-zinc-400 mt-1">
+                Administered by Us. Purpose: Identify whether users have accepted the use of cookies on the Website and record the
+                consent choices You have made.
+              </p>
+            </div>
+            <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+              <span className="text-emerald-400 font-mono font-semibold">Functionality Cookies</span> (Persistent Cookies)
+              <p className="text-zinc-400 mt-1">
+                Administered by Us. Purpose: Allow Us to remember choices You make when You use the Website, such as remembering
+                Your Account login details or language preference.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Use of Your Personal Data */}
+        <section>
+          <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/[0.06] pb-2 mb-4 font-mono">
+            Use of Your Personal Data
+          </h2>
+          <p className="text-xs text-zinc-400 mb-3">The Company may use Personal Data for the following purposes:</p>
+          
+          <ul className="list-disc pl-5 text-xs text-zinc-300 space-y-2">
+            <li><strong>To provide and maintain Our Service</strong>, including to monitor the usage of Our Service.</li>
+            <li><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service.</li>
+            <li><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us.</li>
+            <li><strong>To contact You:</strong> by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as push notifications regarding updates or security notices.</li>
+            <li><strong>To provide You</strong> with news, special offers, and general information about other goods, services and events which We offer.</li>
+            <li><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</li>
+            <li><strong>For business transfers:</strong> To evaluate or conduct a merger, divestiture, restructuring, or sale of assets.</li>
+            <li><strong>For other purposes:</strong> Data analysis, identifying usage trends, and evaluating service effectiveness.</li>
+          </ul>
+
+          <div className="mt-5 p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+            <h4 className="text-xs font-mono font-semibold text-emerald-400 mb-2">Sharing of Personal Data</h4>
+            <p className="text-xs text-zinc-400">
+              We may share Your Personal Data with Service Providers to monitor and analyze the use of Our Service, with Affiliates
+              (who will be required to honor this Privacy Policy), for business transfers, or with other users in public areas of the Service with Your consent.
+            </p>
+          </div>
+        </section>
+
+        {/* Text Messages Privacy Notice */}
+        <section className="p-6 rounded-2xl bg-[#0D1117] border border-emerald-500/30">
+          <h3 className="text-base font-semibold text-emerald-400 font-mono mb-2">
+            Text Messages Privacy Notice
+          </h3>
+          <p className="text-xs text-zinc-300 mb-3">
+            You have the option to receive text (SMS) messages from Us. If You opt in, We will send You updates, notifications,
+            and other communications. When You opt in, We will collect and store information such as Your phone number, the date
+            and method of consent, and message delivery info.
+          </p>
+          <p className="text-xs text-emerald-300 font-medium mb-3">
+            No mobile information will be shared with or sold to third parties or affiliates for marketing or promotional purposes.
+          </p>
+          <ul className="list-disc pl-5 text-xs text-zinc-400 space-y-1 mb-3">
+            <li>Customer care and support</li>
+            <li>Account notifications, status, or renewal reminders</li>
+            <li>Delivery notifications and updates</li>
+            <li>Authentication messages (OTP, passcodes)</li>
+            <li>Security alerts</li>
+            <li>Marketing and promotional offers</li>
+          </ul>
+          <p className="text-[11px] font-mono text-zinc-500">
+            Reply STOP to opt-out. Reply HELP for support. Message & data rates may apply. Messaging frequency may vary.
           </p>
         </section>
 
-        {/* Section 7: Inquiries & Verification */}
-        <section className="pt-4 border-t border-white/[0.08]">
-          <h2 className="text-xl font-bold text-white mb-2 font-mono">
-            7. Contact & API Verification
+        {/* Retention, Transfer, Deletion */}
+        <section className="space-y-6">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
+              Retention of Your Personal Data
+            </h2>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy.
+              User account information is retained for the duration of Your Account plus up to 24 months after closure. Support tickets and chat
+              transcripts are kept for up to 24 months. Website analytics data and server logs are retained for up to 24 months.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
+              Transfer of Your Personal Data
+            </h2>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              Your information, including Personal Data, is processed at the Company&apos;s operating offices in Maharashtra, India, and in any other places
+              where the parties involved in the processing are located. We ensure international transfers are subject to appropriate safeguards.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
+              Delete Your Personal Data
+            </h2>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
+              You may update, amend, or delete Your information at any time by signing in to Your Account or contacting Us.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
+              Disclosure & Security
+            </h2>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              Under certain circumstances, We may disclose Personal Data if required by law or in response to valid public authority requests.
+              While We strive to use commercially reasonable means to protect Your Personal Data, remember that no method of transmission over
+              the Internet is 100% secure.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-white border-b border-white/[0.06] pb-2 mb-3 font-mono">
+              Children&apos;s Privacy
+            </h2>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              Our Service is not directed to anyone under the age of 16. If We become aware that We have collected Personal Information
+              from anyone under 16 without parental consent, We take steps to remove that information immediately.
+            </p>
+          </div>
+        </section>
+
+        {/* Contact Us */}
+        <section className="pt-6 border-t border-white/[0.08]">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 font-mono">
+            Contact Us
           </h2>
-          <p className="text-xs text-zinc-400">
-            For legal inquiries, developer API compliance verifications, or technical questions regarding this policy,
-            contact our automated review desk:
+          <p className="text-xs text-zinc-400 mb-4">
+            If You have any questions about this Privacy Policy, You can contact Us:
           </p>
-          <div className="mt-3 p-3 rounded-lg bg-black border border-white/[0.08] font-mono text-xs text-emerald-400 inline-block">
-            legal@beforeimadeit.com
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
+            <a
+              href="mailto:mattmurdoxx@gmail.com"
+              className="p-4 rounded-xl bg-black border border-white/[0.1] hover:border-emerald-500/40 transition flex items-center gap-3 text-zinc-200 group"
+            >
+              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-black transition">
+                <Mail className="w-4 h-4" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[10px] text-zinc-500 uppercase">By Email</span>
+                <span className="text-emerald-400 font-semibold">mattmurdoxx@gmail.com</span>
+              </div>
+            </a>
+
+            <a
+              href="https://in.pinterest.com/nocturnestudeo"
+              target="_blank"
+              rel="external nofollow noopener noreferrer"
+              className="p-4 rounded-xl bg-black border border-white/[0.1] hover:border-emerald-500/40 transition flex items-center gap-3 text-zinc-200 group"
+            >
+              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-black transition">
+                <Globe className="w-4 h-4" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[10px] text-zinc-500 uppercase">Official Website</span>
+                <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                  <span>in.pinterest.com/nocturnestudeo</span>
+                  <ExternalLink className="w-3 h-3" />
+                </span>
+              </div>
+            </a>
           </div>
         </section>
       </div>
